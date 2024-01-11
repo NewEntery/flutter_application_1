@@ -49,21 +49,22 @@ class _HomePageState extends State<Myapp> {
                               : 'Akun'),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                       Icons.logout), // Ganti dengan ikon logout yang sesuai
                   onPressed: () {
                     showDialog(
                         context: context,
                         builder: (BuildContext context) {
                           return AlertDialog(
-                            title: Text('Logout'),
-                            content: Text('Apakah anda yakin ingin logout?'),
+                            title: const Text('Logout'),
+                            content:
+                                const Text('Apakah anda yakin ingin logout?'),
                             actions: <Widget>[
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                child: Text('Tidak'),
+                                child: const Text('Tidak'),
                               ),
                               TextButton(
                                 onPressed: () {
@@ -71,10 +72,11 @@ class _HomePageState extends State<Myapp> {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => LoginPage()),
+                                        builder: (context) =>
+                                            const LoginPage()),
                                   );
                                 },
-                                child: Text('Ya'),
+                                child: const Text('Ya'),
                               ),
                             ],
                           );
@@ -87,13 +89,13 @@ class _HomePageState extends State<Myapp> {
               children: [
                 Home(),
                 CurrencyConversionPage(),
-                App(),
+                const App(),
                 Calculator(), //TransactionPage(),
                 DeveloperIntroductionForm()
               ],
             ),
             bottomNavigationBar: TabBar(
-              indicator: BoxDecoration(
+              indicator: const BoxDecoration(
                 color: Color.fromARGB(255, 11, 56, 92),
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(20), // Setengah lingkaran di atas
@@ -102,7 +104,7 @@ class _HomePageState extends State<Myapp> {
               tabs: [
                 Tab(
                   icon: Container(
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.home,
                         size: 40.0,
@@ -113,7 +115,7 @@ class _HomePageState extends State<Myapp> {
                 ),
                 Tab(
                   icon: Container(
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.shopping_bag,
                         size: 40.0,
@@ -130,7 +132,7 @@ class _HomePageState extends State<Myapp> {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30.0),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.qr_code_scanner,
                         size: 40.0,
@@ -141,7 +143,7 @@ class _HomePageState extends State<Myapp> {
                 ),
                 Tab(
                   icon: Container(
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.calculate,
                         size: 40.0,
@@ -152,7 +154,7 @@ class _HomePageState extends State<Myapp> {
                 ),
                 Tab(
                   icon: Container(
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.account_circle,
                         size: 40.0,
@@ -179,7 +181,7 @@ class CurrencyConversionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: CurrencyConversionForm(),
       ),
     );
@@ -202,7 +204,7 @@ class Home extends StatelessWidget {
                 height: 50.0,
               ),
             ),
-            Text(
+            const Text(
               "Selamat datang di dunia keajaiban Jepang dengan koleksi merch terbaru kami! Dalam kumpulan ini, kami menggabungkan keindahan seni tradisional Jepang dengan sentuhan modern yang memukau. Produk-produk kami tidak hanya memperlihatkan warisan budaya yang kaya, tetapi juga menghadirkan nuansa eksklusif Jepang yang bisa Anda nikmati dalam keseharian Anda. Dari pakaian yang stylish hingga barang-barang unik yang menginspirasi, kami siap membawa Anda dalam perjalanan budaya yang tak terlupakan. Selamat berbelanja dan temukan keindahan Jepang dalam setiap detailnya!",
               style: TextStyle(fontSize: 16.0),
               textAlign: TextAlign.center,
@@ -229,23 +231,23 @@ class _AccountBoxTabState extends State<AccountBoxTab> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(height: 20),
-          CircleAvatar(
+          const SizedBox(height: 20),
+          const CircleAvatar(
             radius: 80,
             backgroundImage: AssetImage(
                 'Asset/Image/profile_image.png'), // Ganti dengan path gambar profil Anda
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             'Nama Akun',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               // Tambahkan logika untuk mengedit profil di sini
             },
-            child: Text('Edit Profil'),
+            child: const Text('Edit Profil'),
           ),
         ],
       ),
@@ -280,7 +282,7 @@ class TransactionPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return Card(
             elevation: 5,
-            margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             child: ListTile(
               leading: CircleAvatar(
                 child:
@@ -289,7 +291,7 @@ class TransactionPage extends StatelessWidget {
               title: Text(transactions[index].description),
               subtitle: Text(transactions[index].id),
               trailing: IconButton(
-                icon: Icon(Icons.delete),
+                icon: const Icon(Icons.delete),
                 color: Colors.red,
                 onPressed: () {
                   // Tambahkan logika untuk menghapus transaksi di sini
@@ -303,7 +305,7 @@ class TransactionPage extends StatelessWidget {
         onPressed: () {
           // Tambahkan logika untuk menambahkan transaksi di sini
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -351,7 +353,7 @@ class _AppState extends State<App> {
         body: ListView(
           shrinkWrap: true,
           children: <Widget>[
-            TextButton(onPressed: _scan, child: Text('Start QR scan')),
+            TextButton(onPressed: _scan, child: const Text('Start QR scan')),
             if (scanResult != null)
               Card(
                 child: Column(

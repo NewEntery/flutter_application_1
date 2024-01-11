@@ -43,7 +43,7 @@ class _CalculatorState extends State<Calculator> {
         onPressed: () => onButtonPressed(buttonText),
         child: Text(
           buttonText,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
           ),
@@ -59,11 +59,11 @@ class _CalculatorState extends State<Calculator> {
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               alignment: Alignment.centerRight,
               child: Text(
                 input,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 24.0,
                 ),
               ),
@@ -75,7 +75,7 @@ class _CalculatorState extends State<Calculator> {
               alignment: Alignment.centerRight,
               child: Text(
                 result,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 32.0,
                   fontWeight: FontWeight.bold,
                 ),

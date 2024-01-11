@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "250012370069",
+    "project_id": "iotkel",
+    "storage_bucket": "iotkel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250012370069:android:345af3f12af05d45ef079c",
+        "android_client_info": {
+          "package_name": "com.example.aplicastion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYL4qbrJ-DSiuJVap9NDymHcztm4fylfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

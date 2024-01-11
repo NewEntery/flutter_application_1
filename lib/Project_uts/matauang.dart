@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fl_chart/fl_chart.dart';
 
 class CurrencyConversionForm extends StatefulWidget {
   @override
@@ -13,14 +12,7 @@ class _CurrencyConversionFormState extends State<CurrencyConversionForm> {
 
   String fromCurrency = 'USD';
   String toCurrency = 'EUR';
-  List<FlSpot> currencyValueData = [
-    FlSpot(0, 3),
-    FlSpot(1, 4),
-    FlSpot(2, 3.5),
-    FlSpot(3, 3.8),
-    FlSpot(4, 4.2),
-    FlSpot(5, 4.0),
-  ];
+
   // Faktor konversi (misalnya, 1 USD ke EUR)
   double conversionRate = 0.85;
 

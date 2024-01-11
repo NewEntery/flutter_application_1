@@ -36,9 +36,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   barcode_scan2: any
   math_expressions: ^2.4.0
-  fl_chart: ^0.64.0
+  
   url_launcher: ^6.2.1
   font_awesome_flutter: ^10.6.0
+  syncfusion_flutter_charts: ^23.1.44
+  firebase_auth: ^4.14.1
+  
   
   
 
